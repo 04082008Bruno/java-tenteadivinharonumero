@@ -1,25 +1,14 @@
-//declaração de variáveis 
+let resposta = document.getElementById('resposta');
 
-let quantidade = 0;
-let total = 0;
+let computador = 0;
+let jogador = 0;
 
-//função  
-function calculaAna(){
-//promp para entrada de dados
+let numminimo = 1;
+let nummaximo = 100;
+let dif = nummaximo - numminimo;
+let aleatorio =  Math.random();
+computador = numminimo + Math.trunc(dif * aleatorio);
 
-quantidade = parseInt(prompt("digite a quantidade de vezes que a ana quase desistiu:"));
-
-total = total + quantidade;
-//mostra o resultado mostrando alert
-//alert(total);
-
- 
-//mostra o resultado usando innerHTML
-let dados = window.document.getElementById('contador');
-
-dados.innerHTML = "Quantidade: "  + total + ".";
-
-if(total == 10){
-    dados.innerHTML = "Quantidade: " + total + " podi.";
-}
+func Adivinha(){
+    jogador = prompt("Qual é o seu palpite?")
 }
