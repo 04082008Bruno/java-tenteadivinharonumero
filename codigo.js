@@ -9,6 +9,17 @@ let dif = nummaximo - numminimo;
 let aleatorio =  Math.random();
 computador = numminimo + Math.trunc(dif * aleatorio);
 
-func Adivinha(){
-    jogador = prompt("Qual é o seu palpite?")
+function Adivinha(){
+    jogador = prompt("Qual é o seu palpite?");
+    
+    if(jogador == computador){
+        resposta.innerHTML += "<p>Parabéns!! Você acertou! Eu tinha sorteado esse valor " + computador + "</p>";
+        document.getElementById("botao").style.visibility = "hidden";
+    } else if(computador < jogador){
+        resposta.innerHTML += "<p>Você falou " + jogador + " .O meu número é um pouco menor!</p>";
+      
+    }
+    else if (jogador < computador){
+        resposta.innerHTML += "<p>Você falou " + jogador + " .O meu número é um pouco maior!</p>";
+    }
 }
